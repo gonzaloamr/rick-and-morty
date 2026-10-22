@@ -1,0 +1,35 @@
+# AI assistants
+.claude/
+CLAUDE.md
+CLAUDE.local.md
+.cursor/
+.cursorrules
+.cursorignore
+.cursorindexingignore
+.windsurf/
+.windsurfrules
+.continue/
+.aider*
+.copilot/
+.github/copilot-instructions.md
+.codeium/
+.anchored/
+AGENTS.md
+GEMINI.md
+.gemini/
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# PHP / dependencies
+vendor/
+.env
+*.log
