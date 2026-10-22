@@ -18,7 +18,26 @@ function api_get(string $url): ?array
 
 function get_characters(array $ids): array
 {
-    return api_get(API_BASE . '/character/' . implode(',', $ids)) ?? [];
+    if (empty($ids)) {
+        return [];
+    }
+
+    $result = api_get(API_BASE . '/character/' . implode(',', $ids)) ?? [];
+
+    // A API devolve um objeto (e não uma lista) quando é pedido um único id
+    return isset($result['id']) ? [$result] : $result;
+}
+
+function id_from_url(string $url): int
+{
+    return (int) basename($url);
+}
+
+function status_class(?string $status): string
+{
+    $status = strtolower((string) $status);
+
+    return in_array($status, ['alive', 'dead'], true) ? $status : 'unknown';
 }
 
 function get_character(int $id): ?array
