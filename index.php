@@ -58,6 +58,6 @@ $characters = get_characters([1, 2]);
         <?php endif; ?>
     </main>
 
-    <footer>Dados de <a href="https://rickandmortyapi.com" target="_blank" rel="noopener">The Rick and Morty API</a></footer>
+    <footer>Dados de <a href="https://rickandmortyapi.com" target="_blank" rel="noopener">The Rick and Morty API by Gonzalo Muñoz</a></footer>
 </body>
 </html>
